@@ -16,6 +16,16 @@ class App < Sinatra::Base
   end
 
   # CSS {{{
+  get '/css/text-size-adjust' do
+    @title = 'Text-size-adjust - CSS — HTML5'
+    mustache :css_textsizeadjust
+  end
+
+  get '/css/tap-highlight-color' do
+    @title = 'Tap-highlight-color - CSS — HTML5'
+    mustache :css_taphighlight
+  end
+
   get '/css/text-shadow' do
     @title = 'Text-shadow - CSS — HTML5'
     mustache :css_textshadow
