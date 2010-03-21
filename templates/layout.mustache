@@ -2,6 +2,10 @@
 <html>
 	<meta charset="utf--8">
 	<title>{{title}}</title>
+	<style>
+		.groupe:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; } .groupe {display: inline-block;}
+		/* Hides from IE-mac \*/ * html .groupe {height: 1%;} .groupe {display: block;} /* End hide from IE-mac */
+	</style>
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
 
 {{{yield}}}
