@@ -49,6 +49,12 @@ class App < Sinatra::Base
   # }}}
 
   # Javascript {{{
+  get '/javascript/cache.html' do
+    @title = 'Cache - Javascript — HTML5'
+    @html = ' manifest="cache.manifest"'
+    mustache :javascript_cache
+  end
+
   get '/javascript/evenements' do
     @title = 'Événements - Javascript — HTML5'
     mustache :javascript_evenements

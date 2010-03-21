@@ -4,6 +4,9 @@ class App
       def title 
         @title || ''
       end
+      def html 
+        @html || ''
+      end
     end
   end
 end
