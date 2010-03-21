@@ -1,4 +1,5 @@
 # encoding: utf-8
+# vim: set fdm=marker:
 require 'sinatra/base'
 require 'mustache/sinatra'
 
@@ -14,6 +15,7 @@ class App < Sinatra::Base
     mustache :index
   end
 
+  # CSS {{{
   get '/css/text-shadow' do
     @title = 'Text-shadow - CSS — HTML5'
     mustache :css_textshadow
@@ -33,7 +35,9 @@ class App < Sinatra::Base
     @title = 'Box-shadow - CSS — HTML5'
     mustache :css_boxshadow
   end
+  # }}}
 
+  # Javascript {{{
   get '/javascript/geolocation' do
     @title = 'Géolocalisation - Javascript — HTML5'
     mustache :javascript_geolocation
@@ -43,5 +47,6 @@ class App < Sinatra::Base
     @title = 'Stockage local - Javascript — HTML5'
     mustache :javascript_storage
   end
+  # }}}
 
 end
