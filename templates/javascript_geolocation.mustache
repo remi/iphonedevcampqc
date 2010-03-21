@@ -1,0 +1,7 @@
+	<script>
+		navigator
+		.geolocation
+		.getCurrentPosition(function(p) {
+			alert('Vous êtes à '+p.coords.latitude+', '+p.coords.longitude);
+		});
+	</script>
