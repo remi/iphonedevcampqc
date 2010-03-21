@@ -1,0 +1,34 @@
+	<style>
+		html { -webkit-text-size-adjust: 400%; }
+	</style>
+	<script>
+		$(function() {
+			$('.mouse a').bind('focus', function() {
+				$('body').append('focus<br />');
+			}).bind('blur', function() {
+				$('body').append('blur<br />');
+			}).bind('mouseover', function() {
+				$('body').append('mouseover<br />');
+			}).bind('mousemove', function() {
+				$('body').append('mousemove<br />');
+			}).bind('mousedown', function() {
+				$('body').append('mousedown<br />');
+			}).bind('mouseup', function() {
+				$('body').append('mouseup<br />');
+			}).bind('click', function() {
+				$('body').append('click<br />');
+				return false;
+			});
+
+			$('input').bind('focus', function() {
+				$('body').append('focus<br />');
+			}).bind('blur', function() {
+				$('body').append('blur<br />');
+			});
+		});
+	</script>
+	<ul>
+		<li><a href="." ondrag="alert('drag')">ondrag</a></li>
+		<li class="mouse"><a href=".">mouse</a></li>
+		<li><input type="text" /></li>
+	</ul>

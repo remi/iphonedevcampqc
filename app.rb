@@ -48,6 +48,11 @@ class App < Sinatra::Base
   # }}}
 
   # Javascript {{{
+  get '/javascript/evenements' do
+    @title = 'Événements - Javascript — HTML5'
+    mustache :javascript_evenements
+  end
+
   get '/javascript/geolocation' do
     @title = 'Géolocalisation - Javascript — HTML5'
     mustache :javascript_geolocation
