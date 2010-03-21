@@ -16,6 +16,18 @@ class App < Sinatra::Base
     mustache :index
   end
 
+  # HTML {{{
+  get '/html/input' do
+    @title = 'Types de champ - HTML — HTML5'
+    mustache :html_input
+  end
+
+  get '/html/video' do
+    @title = 'Video - HTML — HTML5'
+    mustache :html_video
+  end
+  # }}}
+ 
   # CSS {{{
   get '/css/text-size-adjust' do
     @title = 'Text-size-adjust - CSS — HTML5'
@@ -49,7 +61,7 @@ class App < Sinatra::Base
   # }}}
 
   # Javascript {{{
-  get '/javascript/cache.html' do
+  get '/javascript/cache' do
     @title = 'Cache - Javascript — HTML5'
     @html = ' manifest="cache.manifest"'
     mustache :javascript_cache
