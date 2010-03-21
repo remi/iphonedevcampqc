@@ -1,5 +1,6 @@
 # encoding: utf-8
 # vim: set fdm=marker:
+
 require 'sinatra/base'
 require 'mustache/sinatra'
 
