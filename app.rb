@@ -12,6 +12,7 @@ class App < Sinatra::Base
   set :public, File.join(File.dirname(__FILE__), 'public')
 
   get '/' do
+    @title = 'HTML5 - Quelles sont les possibilités que nous offre le iPhone/iPad en terme de HTML, CSS et Javascript?'
     mustache :index
   end
 
