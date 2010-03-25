@@ -1,6 +1,7 @@
 Le code source de ma présentation au premier [iPhone + iPad DevCamp Québec](http://iphonedevcampqc.org), le 31 mars 2010, sous forme d’application [Sinatra](http://www.sinatrarb.com).
 
-	$ gem install thin sinatra mustache
+	$ gem install thin mustache
+	$ gem install sinatra --version 0.9.6
 	$ git clone http://github.com/remiprev/iphonedevcampqc.git
 	$ cd iphonedevcampqc
 	$ thin start
