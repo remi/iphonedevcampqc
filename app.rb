@@ -91,6 +91,11 @@ class App < Sinatra::Base
     @title = 'Stockage local - Javascript — HTML5'
     mustache :javascript_storage, {}, { :title => @title }
   end
+
+  get '/javascript/canvas' do
+    @title = 'Canvas - Javascript — HTML5'
+    mustache :javascript_canvas, {}, { :title => @title }
+  end
   # }}}
 
 end

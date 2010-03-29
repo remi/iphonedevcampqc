@@ -1,0 +1,11 @@
+<canvas id="toile" width="500" height="500" />
+<script type="text/javascript">
+	setTimeout(function() {
+		c = document.getElementById('toile').getContext('2d');
+		c.fillStyle = "#f00";
+		c.fillRect(0,0,500,500);
+		c.fillStyle = "#000";
+		c.fillRect(10,10,100,100);
+	}, 10);
+</script>
+
