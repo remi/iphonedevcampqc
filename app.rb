@@ -26,6 +26,16 @@ class App < Sinatra::Base
     @title = 'Video - HTML — HTML5'
     mustache :html_video, {}, { :title => @title }
   end
+
+  get '/html/icon' do
+    @title = 'Apple Touch Icon - HTML — HTML5'
+    mustache :html_icon, {}, { :title => @title }
+  end
+
+  get '/html/icon-precomposed' do
+    @title = 'Apple Touch Icon Precomposed - HTML — HTML5'
+    mustache :html_iconprecomposed, {}, { :title => @title }
+  end
   # }}}
  
   # CSS {{{
