@@ -36,6 +36,21 @@ class App < Sinatra::Base
     @title = 'Apple Touch Icon Precomposed - HTML — HTML5'
     mustache :html_iconprecomposed, {}, { :title => @title }
   end
+
+  get '/html/telephone' do
+    @title = 'Format-detection - HTML — HTML5'
+    mustache :html_telephone, {}, { :title => @title }
+  end
+
+  get '/html/telephone-no' do
+    @title = 'Format-detection - HTML — HTML5'
+    mustache :html_telephoneno, {}, { :title => @title }
+  end
+
+  get '/html/attributs' do
+    @title = 'Nouveaux attributs - HTML — HTML5'
+    mustache :html_attributs, {}, { :title => @title }
+  end
   # }}}
  
   # CSS {{{
@@ -95,6 +110,16 @@ class App < Sinatra::Base
   get '/javascript/canvas' do
     @title = 'Canvas - Javascript — HTML5'
     mustache :javascript_canvas, {}, { :title => @title }
+  end
+
+  get '/javascript/touch' do
+    @title = 'Événements “touch” - Javascript — HTML5'
+    mustache :javascript_touch, {}, { :title => @title }
+  end
+
+  get '/javascript/gesture' do
+    @title = 'Événements “gesture” - Javascript — HTML5'
+    mustache :javascript_gesture, {}, { :title => @title }
   end
   # }}}
 

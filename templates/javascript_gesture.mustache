@@ -1,0 +1,8 @@
+<meta name="viewport" content="user-scalable=0" />
+<script type="text/javascript">
+	function gesturechange(e) {
+		e.preventDefault();
+		e.target.style.webkitTransform = 'scale(' + e.scale + ') rotate('+ e.rotation + 'deg)';
+	}
+</script>
+<div ongesturechange="gesturechange(event)" style="height: 300px; width: 300px; background: blue; position: absolute; left: 50%; top: 50%; margin: -150px 0 0 -150px;"></div>

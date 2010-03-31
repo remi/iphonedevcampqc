@@ -1,0 +1,33 @@
+<meta name="viewport" content="user-scalable=0" />
+<style type="text/css">
+	#boite {
+		height: 300px;
+		width: 300px;
+		background: blue;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+	   	margin: -150px 0 0 -150px;
+	}
+</style>
+<div id="boite"></div>
+<script type="text/javascript">
+
+	function touchStart(event) {
+		startX = event.targetTouches[0].pageX;
+		startY = event.targetTouches[0].pageY;
+	}
+
+	function touchMove(event) {
+		event.preventDefault();
+		curX = event.targetTouches[0].pageX - startX;
+		curY = event.targetTouches[0].pageY - startY;
+		event.targetTouches[0].target.style.webkitTransform = 'translate(' + curX + 'px, ' + curY + 'px)';
+	}
+
+	element = document.getElementById('boite');
+	element.addEventListener("touchstart", touchStart, false);
+	element.addEventListener("touchmove", touchMove, false);
+	/*element.addEventListener("touchend", touchEnd, false);*/
+	/*element.addEventListener("touchcancel", touchCancel, false);*/
+</script>
